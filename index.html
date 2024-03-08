@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Fontawesome -->
+    <script src="https://kit.fontawesome.com/56be168339.js" crossorigin="anonymous"></script>
+    <title>Geremy Ocsa</title>
+</head>
+
+<body>
+
+    <header class="header">
+        <a href="#"><img src="assets/logo.webp" alt=""></a>
+        <nav class="header__navbar">
+
+            <ul class="sidebar">
+                <a onclick=hideSideBar() href="#"><i class="fa-solid fa-x"></i></a>
+                <a href="#">Portfolio</a>
+                <a href="#">About</a>
+                <a href="#">Contact</a>
+            </ul>
+            <ul>
+                <a class="hiddenMobile" href="#">Portfolio</a>
+                <a class="hiddenMobile" href="#">About</a>
+                <a class="hiddenMobile" href="#">Contact</a>
+                <a class="btnMenu" onclick=showSideBar() href="#"><i class="fa-solid fa-bars"></i></a>
+            </ul>
+
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="cover">
+            <div class="cover__myName">
+                <h1>Gerem<span>y</span> Ocsa</h1>
+                <p>Dev<span>elo</span>per</p>
+            </div>
+        </section>
+
+        <section class="portfolio">
+            <h1>Portfolio</h1>
+            <div class="portfolio__gallery">
+                <div class="photo1">
+                    <img src="assets/1.webp">
+                </div>
+                <div class="photo2">
+                    <img src="assets/2.webp" alt="">
+                </div>
+                <div class="photo3">
+                    <img src="assets/3.webp" alt="">
+                </div>
+                <div class="photo4">
+                    <img src="assets/4.webp" alt="">
+                </div>
+                <div class="photo5">
+                    <img src="assets/5.webp" alt="">
+                </div>
+                <div class="photo6">
+                    <img src="assets/6.webp" alt="">
+                </div>
+                <div class="photo7">
+                    <img src="assets/7.webp" alt="">
+                </div>
+                <div class="photo8">
+                    <img src="assets/8.webp" alt="">
+                </div>
+                <div class="photo9">
+                    <img src="assets/9.webp" alt="">
+                </div>
+                <div class="photo10">
+                    <img src="assets/10.webp" alt="">
+                </div>
+                <div class="photo11">
+                    <img src="assets/11.webp" alt="">
+                </div>
+            </div>
+        </section>
+
+        <section class="about">
+            <h1 class="about__title">About Me</h1>
+            <hr>
+            <h4 class="about__subtitle">Hey There, I'm Geremy</h4>
+            <p class="about__para">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis voluptas ipsa
+                nobis doloremque pariatur eos omnis, aperiam facilis est. Dicta veniam iste natus ab rerum, voluptate
+                consequuntur dolore nemo sapiente blanditiis autem beatae sed corporis quaerat sint, aut inventore
+                laboriosam, quasi deleniti vero nulla! Id facere aperiam rerum aliquid maiores?</p>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="footer__container">
+            <div class="footer__left">
+                <h1>Contact</h1>
+                <ul>
+                    <li><i class="fa-solid fa-envelope fa-sm"></i>geremy.ocsa11@gmail.com</li>
+                    <li><i class="fa-solid fa-phone fa-sm"></i>985-282-618</li>
+                    <li><i class="fa-solid fa-map-location fa-sm"></i>Lima, Peru</li>
+                </ul>
+                <p>&copy; 2024 by Geremy Ocsa</p>
+                <p>Site design created by Geremy</p>
+            </div>
+            <div class="footer__right">
+                <input type="text" placeholder="Name">
+                <input type="text" placeholder="Email">
+                <input type="text" placeholder="Subject">
+                <textarea placeholder="Message" rows="4"></textarea>
+                <p href="#">Submit</p>
+            </div>
+            <div class="footer__icons">
+                <ul>
+                    <li><a href="https://www.facebook.com/geremy.ocsaflores/" target="_blank"><i
+                                class="fa-brands fa-facebook fa-lg"></i></a></li>
+                    <li><a href="https://twitter.com/GeremyOcsaFlore" target="_blank"><i
+                                class="fa-brands fa-x-twitter fa-lg"></i></a></li>
+                    <li><a href="https://github.com/GeremyOcsa" target="_blank"><i
+                                class="fa-brands fa-github fa-lg"></i></a></li>
+                    <li><a href="https://discord.com/invite/vkZNfFyt" target="_blank"><i
+                                class="fa-brands fa-discord fa-lg"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function showSideBar() {
+            const sidebar = document.querySelector('.sidebar');
+            sidebar.style.display = 'flex'
+        }
+
+        function hideSideBar() {
+            const sidebar = document.querySelector('.sidebar');
+            sidebar.style.display = 'none'
+        }
+
+        window.addEventListener('load', function () {
+            var width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+            if (width > 700) {
+                document.querySelector('.sidebar').style.display = 'none';
+            }
+        });
+    </script>
+</body>
+
+</html>
